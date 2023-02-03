@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 html,body{
     overflow-x: hidden;
@@ -27,4 +29,9 @@ html,body{
     flex-direction: column;
     width: 20%;
     height: 100%;
+}
+.card-login label{
+    display: block;
+    text-transform: capitalize;
+    margin-bottom: 5px;
 }
