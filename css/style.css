@@ -72,12 +72,14 @@ form{
     border: none;
     border-bottom: solid 2px var(--color-3);
     width: 100%;
-    margin-bottom: 20px;
     background: none;
     font-size: 17px;
     font-family: Poppins;
     color: #8503ff;
-    font-weight: bold;
+    font-weight: normal;
+}
+.input-text{
+    margin-bottom: 20px;
 }
 /*animação cor de borda do input*/
 .input input:focus{
@@ -174,6 +176,9 @@ hr{
         margin-bottom: 0;
         margin-top: 0;
     }
+    .input-text{
+        margin-bottom: 0;
+    }
     .input input:focus~ label, .input input:valid~ label{
         transition: ease 1.5s;
         top: -8px;
@@ -182,14 +187,18 @@ hr{
         text-transform: capitalize;
     }
     .flex-container h1{
-        margin-bottom: 0;
+       margin: 0;
     }
 
     .remember{
-        margin: 2px;
+        margin: 0;
+    }
+    form > span{
+        position: absolute;
+        bottom: 0;
     }
     .cadastro{
-        margin-top: 2px;
+        margin-top: 0;
     }
     hr{
         display: none;
