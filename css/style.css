@@ -28,7 +28,7 @@ body{
 }
 /*Estilo aplicado à div flex-container definindo cor do background e texto dentro do mesmo*/
 .flex-container{
-    min-width: 320px;
+    min-width: 280px;
     background-color: rgba(255, 255, 255,.65);
     position: absolute;
     color: var(--color-4);
@@ -160,7 +160,7 @@ hr{
     .flex-container{
         min-width: 280px;
         padding: 20px;
-        width: 100%;
+        width: 280px;
     }
 }
 @media (max-height:280px){
@@ -178,8 +178,8 @@ hr{
         transition: ease 1.5s;
         top: -8px;
         font-size: 13px;
-        color: var(--color-1);
-        text-transform: uppercase;
+        color: white;
+        text-transform: capitalize;
     }
     .flex-container h1{
         margin-bottom: 0;
