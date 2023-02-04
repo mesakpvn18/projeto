@@ -1,0 +1,197 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Lato:100,100italic,300,300italic,regular,italic,700,700italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-1: #2d12af;
+    --color-2: #4b30cd;
+    --color-3: #080289;
+    --color-4: #0643fb;
+    --color-5: #8503ff;
+}
+/*Estilizando e definindo configurações do background*/
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgb(17,17,17,.3), rgb(20,20,20,.4)), url(../img/3d-network-data-communications-background-with-low-poly-plexus-design.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+/*Estilo aplicado à div flex-container definindo cor do background e texto dentro do mesmo*/
+.flex-container{
+    min-width: 320px;
+    background-color: rgba(255, 255, 255,.65);
+    position: absolute;
+    color: var(--color-4);
+    font-family: Poppins, Lato, 'Open Sans';
+    border-radius: 10px;
+    padding: 10px;
+    border: solid 2px var(--color-1);
+}
+
+/*Estilizando h1*/
+.flex-container h1{
+    position: relative;
+    text-transform: capitalize;
+    margin: 10px 10px 1em;
+}
+
+/*Estilizando linha abaixo do h1*/
+.flex-container h1::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 7px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+form{
+    width: 100%;
+    padding: 10px 10px;
+    
+}
+
+/*Estilizando inputs*/
+.input{
+    padding: 10px 0;
+    position: relative;
+}
+.input input{
+    outline: none;
+    border: none;
+    border-bottom: solid 2px var(--color-3);
+    width: 100%;
+    margin-bottom: 20px;
+    background: none;
+    font-size: 17px;
+    font-family: Poppins;
+    color: #8503ff;
+    font-weight: bold;
+}
+/*animação cor de borda do input*/
+.input input:focus{
+    border-color: var(--color-4);
+    transition: 1.5;
+}
+/*Estilizando label*/
+form .input label{
+    position: absolute;
+    top: 12px;
+    left: 0px;
+    text-transform: capitalize;
+    font-size: 17px;
+    pointer-events: none;
+    transition: 1s;
+}
+/*Animação nos label*/
+.input input:focus ~ label, .input input:valid ~ label{
+    top: -15px;
+    font-size: 13px;
+    color: #ffffff;
+    
+}
+/*Estilizando checkbox*/
+.remember{
+    display: flex;
+    justify-content: baseline;
+    align-items: baseline;
+    
+}
+.remember input{
+    outline: none;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+.remember label{
+    cursor: pointer;
+}
+/*Estilizando botão*/
+.btn button{
+    width: 100%;
+    padding: 10px;
+    height: 40px;
+    margin-top: 40px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    background-color: var(--color-5);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+}
+.btn button:hover{
+    background-color: #8e1cf8;
+}
+/*Estilizando a parte de cadastro*/
+
+.cadastro p{
+    display: inline-block;
+}
+.cadastro span a{
+    text-decoration: none;
+    color: var(--color-1);
+}
+.cadastro span a:hover{
+    text-decoration: underline;
+}
+hr{
+    
+    margin-top: 30px;
+    margin-bottom: 0;
+    border-radius: 6px;
+}
+
+/*trabalhando responsividade para dispositivo menor que 320px*/
+
+
+@media (max-width: 316px){
+    .flex-container{
+        min-width: 280px;
+        padding: 20px;
+        width: 100%;
+    }
+}
+@media (max-height:280px){
+    .flex-container{
+        height: 280px;
+    }
+    .btn button{
+        margin-top: 5px;
+    }
+    .input input{
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    .input input:focus~ label, .input input:valid~ label{
+        transition: ease 1.5s;
+        top: -8px;
+        font-size: 13px;
+        color: var(--color-1);
+        text-transform: uppercase;
+    }
+    .flex-container h1{
+        margin-bottom: 0;
+    }
+
+    .remember{
+        margin: 2px;
+    }
+    .cadastro{
+        margin-top: 2px;
+    }
+    hr{
+        display: none;
+    }
+}
